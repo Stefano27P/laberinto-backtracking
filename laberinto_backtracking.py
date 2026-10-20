@@ -22,7 +22,7 @@ def imprime_por_filas(res):
 
 
 def laberinto(lab, f, c, puntos, camino):
-    # Verificar los limites de la matriz
+
     if f < 0 or f >= len(lab):
         return False
     if c < 0 or c >= len(lab[0]):
@@ -58,7 +58,6 @@ def laberinto(lab, f, c, puntos, camino):
     if laberinto(lab, f, c - 1, puntos, camino):
         return True
 
-    # Si no hay salida, retirar esta celda
     camino.pop()
     return False
 
@@ -88,7 +87,7 @@ if laberinto(lab, 8, 0, 0, camino):
 
     imprime_por_filas(res)
 
-    print("Impresion 10")
+    print("Impresion Final del camino")
     print("¡Salimos! Se encontro un camino con 23 puntos o mas.")
     print("Matriz final del camino:")
     imprime_camino(res)
